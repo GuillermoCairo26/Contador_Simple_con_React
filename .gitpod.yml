@@ -4,3 +4,7 @@ ports:
 tasks:
     - command: >
         npm i vercel -g
+
+vscode:
+  extensions:
+    - ms-ceintl.vscode-language-pack-es@1.56.1:36fe8aab90589ff063f7113c8e5780d6

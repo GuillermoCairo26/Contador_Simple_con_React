@@ -1,13 +1,75 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+.caja {    
+    margin: auto;
+    height: 135px;
+    width: 100px;
+    border-radius: 15px;
+    color: whitesmoke;
+    font-size: 85px;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    border-style: outset;
+    border-color: rgb(34, 34, 34);
+    
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.icono {
+    background: linear-gradient(0deg, #000, #272727);
+    color: whitesmoke;
+    height: 150px;
+    width: 130px;
+    margin: auto;
+    margin-left: 10px;
+    border-radius: 15px;
+    font-size: 90px;
+    text-align: center;
+    border-style: outset;
+    border-color: rgb(34, 34, 34);
+}
 
-*/
+// Marco luces de colores
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+
+.container-fluid {
+	position: relative;
+    margin: auto;
+    margin-top: 40px;
+	width: 90%;
+	height: 250px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.container-fluid:before, .container-fluid:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.container-fluid:after {
+	filter: blur(50px);
+}
