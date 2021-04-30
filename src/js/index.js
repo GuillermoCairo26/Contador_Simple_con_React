@@ -12,4 +12,24 @@ import "../styles/index.scss";
 import { Contador } from "./component/contador.js";
 
 //render your react application
-ReactDOM.render(<Contador />, document.querySelector("#app"));
+let contador = 0;
+setInterval(() => {
+	let sexto = Math.floor(contador / 1000000) % 10;
+	let quinto = Math.floor(contador / 100000) % 10;
+	let cuarto = Math.floor(contador / 10000) % 10;
+	let tercero = Math.floor(contador / 100) % 10;
+	let segundo = Math.floor(contador / 10) % 10;
+	let primero = Math.floor(contador / 1) % 10;
+	ReactDOM.render(
+		<Contador
+			primero={primero}
+			segundo={segundo}
+			tercero={tercero}
+			cuarto={cuarto}
+			quinto={quinto}
+			sexto={sexto}
+		/>,
+		document.querySelector("#app")
+	);
+	contador++;
+}, 1000);
