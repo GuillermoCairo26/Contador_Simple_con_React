@@ -6,8 +6,12 @@ export function Contador(props) {
 		// Contenedor
 		<div className="container-fluid d-flex container">
 			{/* Cajas */}
+
+			{/* Botón reset */}
 			<div className="icono">
-				<i className="far fa-clock"></i>
+				<button id="boton">
+					<i className="far fa-clock"></i>
+				</button>
 			</div>
 
 			{/* Contador */}
